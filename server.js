@@ -9,7 +9,7 @@ require('dotenv').config();
 
 app.use(express.json());
 
-const mongoose = require('mongoose');
+/*const mongoose = require('mongoose');
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
 );
@@ -17,7 +17,7 @@ const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
-
+*/
 app.use(express.static('build'))
 app.get('/', function (req, res) {
   res.render('index')
